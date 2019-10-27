@@ -15,7 +15,7 @@
 	}
 	$db_host="localhost";
 	$db_username="root";
-	$db_pass="messi10";
+	$db_pass="messi10"; // TODO: make login using db table using proper salting and SHA256
 	$db_name="userToken";
 	$link = mysqli_connect($db_host,$db_username,$db_pass,$db_name);
 	if($link === false)
@@ -78,12 +78,12 @@
 	</style>
 </head>
 <body>
-	<h1>Welcome To Othello !! </h1>
+	<h1>Welcome To Othello!!! </h1>
 	<div id = "container">
 		<form action="process.php" method="post">
 		<div id = "wrapper">
-				<button name="newgame">Create New Game!</button>
-				<button type = "button" onclick="document.getElementById('Footer').style.display='block'" name="joingame">Join Existing Game!</button>
+				<button name="newgame">Create New Game</button>
+				<button type = "button" onclick="document.getElementById('Footer').style.display='block'" name="joingame">Join Existing Game</button>
 				
 		</div>
 		<div id = "Footer" style="display:none">

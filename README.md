@@ -14,9 +14,7 @@ opponent. The game is classed as finished when there are no spaces left on the b
 there are no more possible legal moves for either competitor.
 
 #### The Start 
-Both players begin the game with two pieces on the board in the four centre squares. No
-two matching colours are connected vertically or horizontally so a miniature chequered pattern is made. In the typical set ups where it is black versus white the person using black
-chips must make the first move. 
+Both players begin the game with two pieces on the board in the four centre squares. No two matching colours are connected vertically or horizontally so a miniature chequered pattern is made. In the typical set ups where it is black versus white the person using black chips must make the first move. 
 
 #### The Game
 Both players take it in turns to make their move which consists of placing one piece down in
@@ -33,5 +31,9 @@ Players will then continue to move alternately until they get to the end of the 
 winner is decided. This decision is reached by identifying which of the two opponents has
 the most pieces on the board. 
 
-#### Game Screen Shot:
+#### Game Screen Shot
 ![alt text](https://github.com/Ayush-IITP/Reversi-Game/blob/master/OthelloScreenShot.png)
+
+#### About the code
+The website is written in php and uses mysql database to store the data mid game. Other than this, the website contains a little bit of HTML, CSS, and JavaScript.
+To start the server, normal php commands will work.
