@@ -180,11 +180,9 @@
         var xhttp = new XMLHttpRequest();
         var obj;
         xhttp.open("GET","queryDatabase.php?time=0&token="+token,true);
-        console.log("hello");
         xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             obj = JSON.parse(this.responseText);
-            console.log("hi"+obj);
             obj = obj.time;
             document.getElementById("timer").innerHTML = (init-obj)+"s";
             if(init-obj<0)
@@ -204,7 +202,6 @@
     	// body...	
     	xx = setInterval(function()
     	{
-        console.log("hwt");
     		var xhttp = new XMLHttpRequest();
     		var obj;
     		xhttp.open("GET","queryDatabase.php?token="+token,true);
@@ -215,7 +212,6 @@
       			turn = obj.turn;
             gameAlive = obj.gameAlive;
             userCount = obj.userCount;
-            console.log(userCount);
             if(turn == id && flag1 == 0 && userCount == 2)
             {
               changeTime();
@@ -325,7 +321,6 @@
         i = row-1,j=col;
         while(i>=0 && data.charAt(i*8+j)==other)
         {
-          console.log("hello");
           flag = true;
           i--;
         }
@@ -490,14 +485,12 @@
     {
     	//turn = 1;
       //requestEverySecond();
-    	console.log("num"+num);
     	var row = Math.floor((num-1)/8);
     	var col = (num-1)%8;
     	//check valid move;
     	data = data1;
     	if(document.getElementById("status").innerHTML == "You Lose.....")
         gameAlive = 0;
-    	console.log(row+" "+col+" "+turn+" "+id+" "+other);
     	if(userCount==2 && turn == id&& data.charAt(row*8+col)==0 && gameAlive==1)
     	{
     		//check above
@@ -532,8 +525,6 @@
    			flag = false;
    			checkBottomRight(row,col);
 
-   			console.log(data);
-
         if(mv == 1)
    			{
           clearInterval(myvar);
@@ -555,7 +546,6 @@
           {
             if(data.charAt(i)=='0')
             {
-              console.log(i);
               var row1 = Math.floor((i)/8);
               var col1 = (i)%8;
               flag = false;
